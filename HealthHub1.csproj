@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Registration\BedTracking.cshtml" />
+    <Content Remove="Views\Registration\discharge.cshtml" />
+    <Content Remove="Views\Registration\Index2.cshtml" />
+    <Content Remove="Views\Registration\PatientInfo.cshtml" />
+    <Content Remove="Views\Account\login.cshtml" />
+    <Content Remove="Views\Account\register.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\Enum\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\BedTracking\index.cshtml" />
+    <None Include="Views\Discharge\index.cshtml" />
+    <None Include="Views\home\PatientInfo.cshtml" />
+    <None Include="Views\Registration\Index2.cshtml" />
+    <None Include="Views\Account\Login.cshtml" />
+    <None Include="Views\Account\register.cshtml" />
+    <None Include="wwwroot\shared\footer.html" />
+    <None Include="wwwroot\shared\header.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>

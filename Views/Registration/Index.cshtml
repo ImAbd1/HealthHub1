@@ -1,0 +1,95 @@
+﻿@using HealthHub1.Models
+@model Patient
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Registration";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registration</title>
+    <link rel="icon" type="image/png" href="../Media/images/logo.png">
+    <link rel="stylesheet" href="../CSS/Registration.css" />
+    <link rel="stylesheet" href="../CSS/style.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div id="header-container"></div>
+
+    <main>
+        <div class="">
+            <h1>Patient Registration</h1>
+            <form asp-action="Index" method="post">
+                @* First Name *@
+                <div class="form-group">
+                    <label asp-for="FirstName" class="control-label">First Name</label>
+                    <input asp-for="FirstName" class="form-control" placeholder="First Name" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+
+                @* Last Name *@
+                <div class="form-group">
+                    <label asp-for="LastName" class="control-label">Last Name</label>
+                    <input asp-for="LastName" class="form-control" placeholder="Last Name" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+
+                @* Date of Birth *@
+                <div class="form-group">
+                    <label asp-for="DateOfBirth" class="control-label">Date of Birth</label>
+                    <input asp-for="DateOfBirth" type="date" class="form-control" placeholder="Date of Birth" />
+                    <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                </div>
+
+                @* Contact Number *@
+                <div class="form-group">
+                    <label asp-for="ContactNumber" class="control-label">Contact Number</label>
+                    <input asp-for="ContactNumber" class="form-control" placeholder="Contact Number" />
+                    <span asp-validation-for="ContactNumber" class="text-danger"></span>
+                </div>
+
+                @* Bed Assignment *@
+                <div class="form-group">
+                    <label asp-for="BedId" class="control-label">Bed Assignment:</label>
+                    <select asp-for="BedId" class="form-control bed-dropdown">
+                        <option value="">Select a Bed</option>
+                        @foreach (var bedOption in ViewBag.BedOptions as List<SelectListItem>)
+                        {
+                            <option value="@int.Parse(bedOption.Value)">@bedOption.Text</option>
+                        }
+                    </select>
+                    <span asp-validation-for="BedId" class="text-danger"></span>
+                </div>
+
+                @* Gender *@
+                <div class="form-group">
+                    <label asp-for="Gender" class="control-label">Gender</label>
+                    <select asp-for="Gender" class="form-control">
+                        <option value="">Select</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                    <span asp-validation-for="Gender" class="text-danger"></span>
+                </div>
+
+                @* Submit Button *@
+                <button type="submit" class="btn btn-primary btn-block">Register</button>
+            </form>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

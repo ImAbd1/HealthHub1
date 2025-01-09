@@ -1,0 +1,133 @@
+@using HealthHub1.Models
+@model Patient
+
+@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+	
+<head>
+	<meta name="description" content="Explore a wide range of board games for all ages." />
+	<meta name="keywords" content="board games, strategy games, family games, tabletop games, board games online, buy board games" />
+	<meta name="author" content="PuzzlePlaza Company" />
+	<link rel="icon" type="image/png" href="../Media/images/logo.png" />
+	<title>Patient Info</title>
+	<link rel="stylesheet" href="~/css/style.css" />
+	<link rel="stylesheet" href="~/css/PatientInfo.css" asp-append-version="true" />
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+</head>
+
+<body>
+
+	<div id="header-container"></div>
+
+	<main>
+		<div class="form-container">
+			<div class="head">Patient ID #1</div>
+
+			<form asp-action="UpdatePatient" asp-controller="Home" method="post">
+				<div class="form-row">
+					<div class="form-group">
+						<label asp-for="FirstName">First Name :</label>
+						<input type="text" asp-for="FirstName" class="form-control" />
+						<span asp-validation-for="FirstName" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="LastName">Last Name: </label>
+						<input type="text" asp-for="LastName" class="form-control" />
+						<span asp-validation-for="LastName" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="DateOfBirth">Date Of Birth :</label>
+						<input type="date" asp-for="DateOfBirth" class="form-control" />
+						<span asp-validation-for="DateOfBirth" class="text-danger"></span>
+					</div>
+				</div>
+
+				<div class="form-row">
+					<div class="form-group">
+						<label asp-for="ContactNumber"> Contact Number :</label>
+						<input type="text" asp-for="ContactNumber" class="form-control" />
+						<span asp-validation-for="ContactNumber" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="PatientId"> Patient Id :</label>
+						<input type="text" asp-for="PatientId" class="form-control" />
+						<span asp-validation-for="PatientId" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="Gender">Gender :</label>
+						<select asp-for="Gender" class="form-control">
+							<option value="Male">Male</option>
+							<option value="Female">Female</option>
+							<option value="Other">Other</option>
+						</select>
+						<span asp-validation-for="Gender" class="text-danger"></span>
+					</div>
+				</div>
+
+				<div class="form-row">
+					<div class="form-group">
+						<label asp-for="BedId">Bed Number :</label>
+						<input type="text" asp-for="BedId" class="form-control" />
+						<span asp-validation-for="BedId" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="AdmissionDate">Admission Date : </label>
+						<input type="date" asp-for="AdmissionDate" class="form-control" />
+						<span asp-validation-for="AdmissionDate" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label asp-for="DischargeDate"> Discharge Date :</label>
+						<input type="date" asp-for="DischargeDate" class="form-control" />
+						<span asp-validation-for="DischargeDate" class="text-danger"></span>
+					</div>
+				</div>
+
+				<div class="form-row">
+					<div class="form-group">
+						<label asp-for="PatientHistories">Patient History</label>
+						<textarea asp-for="PatientHistories" class="form-control"></textarea>
+						<span asp-validation-for="PatientHistories" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label for="add-doctor-nurse">Add New Doctor or Nurse :</label>
+						<input type="text" id="add-doctor-nurse" placeholder="Name">
+					</div>
+					<div class="form-group">
+						<label>Patient Doctors and Nurses :</label>
+						<div class="list">
+							Empty<br>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-footer">
+					<button type="submit">Update and Add</button>
+				</div>
+			</form>
+		</div>
+
+	</main>
+
+	<div id="footer-container"></div>
+
+</body>
+
+<script src="../JS/scripts.js"></script>
+<script src="../JS/scroll.js"></script>
+<script src="../JS/logout.js"></script>
+</html>

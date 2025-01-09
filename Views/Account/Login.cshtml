@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="description" content="Explore a wide range of board games for all ages.">
+  <meta name="keywords" content="board games, strategy games, family games, tabletop games, board games online, buy board games">
+  <meta name="author" content="PuzzlePlaza Company">
+  <link rel="icon" type="image/png" href="../Media/images/logo.png">
+  <title>Login</title>
+  <link rel="stylesheet" href="../CSS/login.css">
+</head>
+
+<body>
+  <form method="post">
+    <div id="login">
+      <div class="logo">
+        <img src="../Media/images/logo.png" alt="Logo" />
+      </div>
+
+      <div class="label">
+        <p class="headerAccount">Login</p>
+      </div>
+
+      <div id="info">
+        <div class="email">
+          <label class="infoLabel" for="email">Email</label>
+          <input class="infoInput" type="email" id="email" name="email" required />
+        </div>
+        <div class="password">
+          <label class="infoLabel" for="password">Password</label>
+          <input class="infoInput" type="password" id="password" name="password" required />
+        </div>
+        <div class="position" >
+          <label class="infoLabel">Position</label>
+          <div style="display: flex; gap: 10px; align-items: center; gap: 20px; margin-bottom: 25px; margin-top: 10px;">
+            <input type="radio" id="doctor" name="position" value="Doctor" required/>
+            <label for="doctor" style="margin-right: 30px;">Doctor</label>
+            <input type="radio" id="nurse" name="position" value="Nurse" />
+            <label for="nurse">Nurse</label>
+          </div>
+        </div>
+        <button id="loginButton" name="login" type="submit">Login</button>
+
+        <a class="note" href="register.php">Register.</a>
+      </div>
+  </form>
+</body>
+
+</html>

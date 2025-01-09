@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(../Media/images/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+#login {
+  display: flex;
+  background-color: white;
+  border-radius: 20px;
+  width: 500px;
+  height: 470px;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 50px;
+}
+
+.logo img {
+  max-width: 100px;
+}
+
+.headerAccount {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.password,
+.email {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.infoLabel {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.infoInput {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  height: 30px;
+  padding: 5px;
+}
+
+.label {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.label,
+#info {
+  position: relative;
+  bottom: 20px;
+}
+
+#loginButton {
+  background-color: #f0c527;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#loginButton:hover {
+  background-color: #cdb149;
+}
+
+.note {
+  margin-top: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}

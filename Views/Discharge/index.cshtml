@@ -1,0 +1,86 @@
+@model IEnumerable<Patient>
+
+@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="description" content="Explore a wide range of board games for all ages.">
+	<meta name="keywords" content="board games, strategy games, family games, tabletop games, board games online, buy board games">
+	<meta name="author" content="PuzzlePlaza Company">
+	<link rel="icon" type="image/png" href="../Media/images/logo.png">
+	<a href="../index.php">
+		<link rel="icon" type="image/png" href="../Media/images/logo.png">
+	</a>
+	<title>Discharge</title>
+	<link rel="stylesheet" href="../CSS/Discharge.css" />
+	<link rel="stylesheet" href="../CSS/style.css" />
+
+
+	<style>
+
+	</style>
+</head>
+
+<body>
+	<div id="header-container"></div>
+
+	<main>
+
+		<div class="patients-container">
+			<p class="patients-head">Registered Patients</p>
+			<input type="text" class="search" placeholder="Filter" />
+			<input type="text" class="search" placeholder="Patient Name" />
+			<div class="table-container">
+				<table class="patient-table">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Patient Name</th>
+							<th>Patient Number</th>
+							<th>Admission Date</th>
+							<th>Patient Date of Birth</th>
+							<th>Patient Bed</th>
+							<th>More Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var item in Model)
+						{
+							if (item.Status == "Active")
+							{
+								<tr>
+									<td>@item.PatientId</td>
+									<td>@item.FirstName @item.LastName</td>
+									<td>@item.ContactNumber</td>
+									<td>@item.AdmissionDate</td>
+									<td>@item.DateOfBirth</td>
+									<td>@(item.Bed != null ? item.Bed.BedNumber : "N/A")</td>
+									<td>
+										<a asp-controller="Discharge" asp-action="discharge" asp-route-patientID="@item.PatientId"><img src="../Media/images/Discharge.png" alt="Discharge" class="discharge-icon"></a>
+									</td>
+								</tr>
+							}
+						}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</main>
+
+	<div id="footer-container"></div>
+
+</body>
+
+<script>
+	function redirect() {
+	  window.location.href = "../index.php";
+	}
+</script>
+<script src="../JS/scroll.js"></script>
+<script src="../JS/logout.js"></script>
+
+</html>

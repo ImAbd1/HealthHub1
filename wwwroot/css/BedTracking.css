@@ -1,0 +1,71 @@
+body {
+  background-color: #f4f4f4 !important;
+}
+
+.bed-container {
+  background-color: #f4f4f4 !important;
+  display: grid;
+  gap: 70px;  
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.bed-card {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  width: 100%;
+}
+
+.bed-number {
+  font-size: 25px;
+  margin-right: 15px;
+  text-align: center;
+}
+
+.separator {
+  width: 1px;
+  background-color: #ccc;
+  height: 100%;
+  margin: 0 10px;
+}
+
+.bed-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.occupied .status {
+  color: red;
+}
+
+.available .status {
+  color: green;
+}
+
+.stat{
+  min-width: fit-content;
+}
+
+.details, .status, .stat {
+  font-size: 25px;
+}
+
+.details, .stat {
+  margin-bottom: 5px;
+}
+
+.search {
+  position: relative;
+  left: 1%;
+  width: 20vh;
+  height: 3.5vh;
+  background-color: white;
+  border-radius: 20px;
+  padding: 13px;
+}

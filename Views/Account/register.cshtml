@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="description" content="Explore a wide range of board games for all ages.">
+    <meta name="keywords" content="board games, strategy games, family games, tabletop games, board games online, buy board games">
+    <meta name="author" content="PuzzlePlaza Company">
+    <link rel="icon" type="image/png" href="../Media/images/logo.png">
+    <title>Register</title>
+    <link rel="stylesheet" href="../CSS/register.css">
+</head>
+
+<body>
+    <form method="post">
+        <div id="login">
+            <div class="logo">
+                <img src="../Media/images/logo.png" alt="Logo" />
+            </div>
+
+            <div class="label">
+                <p class="headerAccount">Register</p>
+            </div>
+
+            <div id="info">
+                <div class="form-grid">
+                    <div class="grid-column">
+                        <div class="username">
+                            <label class="infoLabel" for="username">Username</label>
+                            <input class="infoInput" type="text" id="username" name="username" required />
+                        </div>
+
+                        <div class="email">
+                            <label class="infoLabel" for="email">Email</label>
+                            <input class="infoInput" type="email" id="email" name="email" required />
+                        </div>
+
+                        <div class="password">
+                            <label class="infoLabel" for="password">Password</label>
+                            <input class="infoInput" type="password" id="password" name="password" required />
+                        </div>
+                    </div>
+
+                    <div class="grid-column">
+                        <div class="contact">
+                            <label class="infoLabel" for="contact">Contact Number</label>
+                            <input class="infoInput" type="tel" id="contact" name="contact" pattern="[0-9]{10}" required placeholder="1234567890" />
+                        </div>
+
+                        <div class="specialty">
+                            <label class="infoLabel" for="specialty">Specialty</label>
+                            <input class="infoInput" type="text" id="specialty" name="specialty" required placeholder="E.g., Pediatrics" />
+                        </div>
+
+                        <div class="position">
+                            <label class="infoLabel">Position</label>
+                            <div>
+                                <input type="radio" id="doctor" name="position" value="Doctor" required />
+                                <label for="doctor">Doctor</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="nurse" name="position" value="Nurse" />
+                                <label for="nurse">Nurse</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button id="registerButton" name="register" type="submit">Register</button>
+            <a class="note" href="login.php">Already an account? Click Here.</a>
+
+        </div>
+    </form>
+</body>
+
+</html>

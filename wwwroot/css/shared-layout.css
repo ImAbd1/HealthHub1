@@ -1,0 +1,137 @@
+/* Header */
+#header_div {
+  font-size: 25px !important;
+  display: flex !important;
+  background-color: #023f73 !important;
+  color: #fff !important;
+  width: 100% !important;
+  height: 9vh !important;
+  align-items: center !important;
+  z-index: 1 !important;
+}
+
+.logo {
+  margin-left: 10% !important;
+  width: 20% !important;
+  position: relative !important;
+  left: 3% !important;
+}
+
+.welcoming {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center;
+  flex-direction: row !important;
+  gap: 12% !important;
+}
+
+#header {
+  font-family: "Abel", sans-serif !important;
+  font-size: 20px !important;
+  color: #ffffff !important;
+  width: 50% !important;
+  margin: 0px !important;
+}
+
+#user_div {
+  display: flex !important;
+  align-items: center !important;
+  flex-direction: row !important;
+  margin-block: auto !important;
+  gap: 10% !important;
+}
+
+#user_info {
+  display: flex !important;
+  position: relative !important;
+  justify-self: center !important;
+  align-items: center !important;
+  left: 55% !important;
+  gap: 30px !important;
+}
+
+#time {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-block: auto;
+  gap: 10%;
+}
+
+.icons {
+  height: 4.3vh !important;
+}
+
+.userSpan {
+  font-size: 20px !important;
+  color: white !important;
+  margin-left: 10px !important;
+}
+
+.divider {
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  opacity: 0.3;
+  background-color: gray;
+}
+
+#sub_header_div {
+  display: flex !important;
+  width: 100% !important;
+  height: 5vh !important;
+  background-color: #023f73 !important;
+  align-items: center !important;
+}
+
+#widget {
+  display: flex;
+  position: relative;
+  left: 30%;
+  gap: 8%;
+  text-wrap: nowrap;
+  align-items: center;
+}
+
+.widgets {
+  color: white !important;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  margin-top: 20px !important;
+  background-color: #023f73 !important;
+  text-align: center !important;
+  width: 100% !important;
+  height: 27vh !important;
+  color: white !important;
+}
+
+#main_footer {
+  display: flex !important;
+  justify-content: space-around !important;
+  padding: 20px 0 !important;
+}
+
+.footer_details_body {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+}
+
+.footer_head {
+  font-size: 20px !important;
+  font-weight: bold !important;
+}
+
+.footer_body {
+  font-size: 14px !important;
+  color: white !important;
+  text-decoration: none !important;
+}
+
+#company {
+  margin-top: 10px !important;
+  font-size: 12px !important;
+}
